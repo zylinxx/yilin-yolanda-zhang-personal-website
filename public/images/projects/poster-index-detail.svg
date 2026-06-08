@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 980" role="img" aria-labelledby="title desc">
+  <title id="title">Poster Index detail</title>
+  <desc id="desc">Poster grid variations arranged as an archive sheet.</desc>
+  <rect width="1400" height="980" fill="#ece8df"/>
+  <g transform="translate(90 80)">
+    <rect width="260" height="380" fill="#f8f6f0"/>
+    <rect x="30" y="30" width="92" height="270" fill="#20201d"/>
+    <rect x="146" y="30" width="80" height="130" fill="#a33e34"/>
+    <rect x="146" y="190" width="80" height="110" fill="#d7dddc"/>
+  </g>
+  <g transform="translate(410 80)">
+    <rect width="260" height="380" fill="#20201d"/>
+    <rect x="36" y="34" width="70" height="300" fill="#f8f6f0"/>
+    <rect x="136" y="34" width="86" height="300" fill="#d8d3c8"/>
+  </g>
+  <g transform="translate(730 80)">
+    <rect width="260" height="380" fill="#d7dddc"/>
+    <rect x="34" y="34" width="192" height="96" fill="#20201d"/>
+    <rect x="34" y="166" width="88" height="168" fill="#a33e34"/>
+  </g>
+  <g transform="translate(1050 80)">
+    <rect width="260" height="380" fill="#f8f6f0"/>
+    <rect x="34" y="34" width="192" height="300" fill="#a33e34"/>
+    <rect x="72" y="74" width="116" height="220" fill="#20201d"/>
+  </g>
+  <rect x="90" y="560" width="1220" height="16" fill="#20201d"/>
+  <rect x="90" y="630" width="860" height="10" fill="#77736a"/>
+  <rect x="90" y="686" width="1040" height="10" fill="#aaa59b"/>
+  <rect x="90" y="742" width="620" height="10" fill="#aaa59b"/>
+</svg>

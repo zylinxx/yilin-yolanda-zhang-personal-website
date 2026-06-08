@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Walking Notes detail</title>
+  <desc id="desc">Three quiet photographic frames in an archive layout.</desc>
+  <rect width="1400" height="1500" fill="#f8f6f0"/>
+  <rect x="120" y="90" width="1160" height="360" fill="#2f2f2c"/>
+  <path d="M120 450L1280 90v360z" fill="#ded9cf"/>
+  <rect x="120" y="570" width="1160" height="360" fill="#d5d0c5"/>
+  <rect x="330" y="570" width="260" height="360" fill="#1f1f1d"/>
+  <rect x="760" y="570" width="180" height="360" fill="#b8c3c4"/>
+  <rect x="120" y="1050" width="1160" height="360" fill="#232320"/>
+  <path d="M120 1320h1160L860 1050H120z" fill="#f2eee5"/>
+</svg>

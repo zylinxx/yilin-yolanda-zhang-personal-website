@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Archive style portfolio hero composition</title>
+  <desc id="desc">A quiet editorial image with architectural frames, image panels, and muted archive tones.</desc>
+  <rect width="1600" height="1000" fill="#d8d3c8"/>
+  <rect x="72" y="70" width="1456" height="860" fill="#eeeae1"/>
+  <rect x="118" y="118" width="918" height="566" fill="#1d1d1b"/>
+  <rect x="160" y="156" width="835" height="490" fill="#cbc5b8"/>
+  <rect x="205" y="194" width="260" height="374" fill="#f5f2eb"/>
+  <rect x="500" y="194" width="220" height="175" fill="#a33e34"/>
+  <rect x="752" y="194" width="196" height="374" fill="#ece8df"/>
+  <path d="M160 646h835M205 194v374M500 194v452M720 194v452M752 194v374M948 194v374" stroke="#1d1d1b" stroke-width="4" opacity=".32"/>
+  <rect x="1092" y="118" width="322" height="812" fill="#f8f6f0"/>
+  <rect x="1135" y="166" width="236" height="150" fill="#3a3a36"/>
+  <rect x="1135" y="348" width="236" height="98" fill="#d8d3c8"/>
+  <rect x="1135" y="478" width="236" height="326" fill="#bfc8ca"/>
+  <rect x="118" y="730" width="840" height="20" fill="#2f2f2b"/>
+  <rect x="118" y="780" width="640" height="12" fill="#5d5b54"/>
+  <rect x="118" y="825" width="520" height="12" fill="#8b887e"/>
+  <rect x="118" y="870" width="720" height="12" fill="#8b887e"/>
+</svg>

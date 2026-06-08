@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 980" role="img" aria-labelledby="title desc">
+  <title id="title">Threshold House detail</title>
+  <desc id="desc">Plan and section fragments for an architecture project.</desc>
+  <rect width="1400" height="980" fill="#f8f6f0"/>
+  <rect x="80" y="70" width="540" height="760" fill="#ece8df"/>
+  <path d="M150 150h390v600H150zM150 310h390M150 470h390M280 150v600M410 150v600" fill="none" stroke="#222" stroke-width="5" opacity=".55"/>
+  <rect x="710" y="100" width="560" height="250" fill="#d8d3c8"/>
+  <rect x="710" y="410" width="560" height="250" fill="#c5d0d2"/>
+  <path d="M735 310h510M735 620h510M840 100v250M1040 410v250" stroke="#222" stroke-width="4" opacity=".35"/>
+  <rect x="710" y="730" width="420" height="18" fill="#a33e34"/>
+  <rect x="710" y="778" width="520" height="10" fill="#77736a"/>
+  <rect x="710" y="818" width="380" height="10" fill="#aaa59b"/>
+</svg>
