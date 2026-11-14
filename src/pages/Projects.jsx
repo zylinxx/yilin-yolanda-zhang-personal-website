@@ -7,7 +7,12 @@ import { filters, projects } from '../data/projects.js';
 export default function Projects() {
   const [searchParams, setSearchParams] = useSearchParams();
   const categoryParam = searchParams.get('category');
-  const normalizedCategory = categoryParam === 'Visual' ? 'Graphics' : categoryParam;
+  const renamedCategories = {
+    Visual: 'Graphics',
+    Editorial: 'Content',
+    Archive: 'Product',
+  };
+  const normalizedCategory = renamedCategories[categoryParam] ?? categoryParam;
   const activeFilter = filters.includes(normalizedCategory) ? normalizedCategory : 'All';
 
   const visibleProjects = useMemo(() => {
@@ -24,25 +29,32 @@ export default function Projects() {
 
   return (
     <section className="projects-page">
-      <div className="page-heading">
-        <span>Projects</span>
-        <h1 className="projects-heading-title">
-          Selected work across architecture, photography, visualization, and AI studies.
-        </h1>
-      </div>
+      <header className="archive-heading">
+        <div>
+          <h1>Archive</h1>
+          <p className="projects-heading-title">
+            Architecture, products, photography, graphics, and content studies.
+          </p>
+        </div>
+        <span>{String(visibleProjects.length).padStart(2, '0')} works</span>
+      </header>
 
-      <div className="filter-row" aria-label="Project categories">
-        {filters.map((filter) => (
-          <button
-            key={filter}
-            type="button"
-            className={activeFilter === filter ? 'is-active' : ''}
-            onClick={() => handleFilterChange(filter)}
-          >
-            {filter}
-          </button>
-        ))}
-      </div>
+      {/* Filters only help once there is more than one category of work. */}
+      {filters.length > 2 && (
+        <div className="filter-row" aria-label="Project categories">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              type="button"
+              className={activeFilter === filter ? 'is-active' : ''}
+              aria-pressed={activeFilter === filter}
+              onClick={() => handleFilterChange(filter)}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+      )}
 
       <motion.div layout className="projects-grid">
         <AnimatePresence mode="popLayout">

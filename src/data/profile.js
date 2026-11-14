@@ -4,17 +4,18 @@ export const profile = {
   intro: 'Every design begins where memory meets movement.',
   email: 'yzhan652@syr.edu',
   instagram: '@zylinyolanda',
+  instagramUrl: 'https://www.instagram.com/zylinyolanda/',
   location: 'Working across architecture, photography, graphics, editorials and still exploring more.',
   bio: [
     "Hi, I'm 一琳 Yilin, and I also go by Yolanda.",
-    "I study architecture at Syracuse University. Besides designing buildings and make drawings, I also take photographs, make graphics, write articles and occasionally end up somewhere I didn't plan to be (Nepal, for one — long story involving elephants).",
-    'I have been keeping exploring - new tools, new cities, new media, new ways of telling a story. My work comes from a mix of instinct and discipline as I trust curiosity, but I also care about clarity, responsibility, and making things actually happen.',
+    "I study architecture at Syracuse University. Besides designing buildings and making drawings, I also take photographs, make graphics, write articles and occasionally end up somewhere I didn't plan to be (Nepal, for one — long story involving elephants).",
+    'I keep exploring — new tools, new cities, new media, new ways of telling a story. My work comes from a mix of instinct and discipline as I trust curiosity, but I also care about clarity, responsibility, and making things actually happen.',
     "This archive collects the academic, independent, and freelance work that's come out of that process. None of it fits neatly into one category. I like it that way and that’s how this whole website starts.",
   ],
   experience: [
     {
       title: 'Content & Editorial Intern',
-      place: 'Archdaily, Shanghai, China.',
+      place: 'ArchDaily, Shanghai, China.',
     },
     {
       title: 'Architectural Intern',
@@ -32,7 +33,7 @@ export const profile = {
   skillGroups: [
     {
       title: 'Adobe Creative Suite',
-      items: ['Photoshop', 'Illustrator', 'Indesign', 'Lightroom'],
+      items: ['Photoshop', 'Illustrator', 'InDesign', 'Lightroom'],
     },
     {
       title: '3D Modeling',
@@ -40,7 +41,7 @@ export const profile = {
     },
     {
       title: '3D Rendering',
-      items: ['D5Render', 'Vray'],
+      items: ['D5Render', 'V-Ray'],
     },
     {
       title: 'Video Editing',

@@ -1,4 +1,5 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, MotionConfig } from 'framer-motion';
+import { useLayoutEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './components/Footer.jsx';
 import SiteNav from './components/SiteNav.jsx';
@@ -7,64 +8,87 @@ import Home from './pages/Home.jsx';
 import ProjectDetail from './pages/ProjectDetail.jsx';
 import Projects from './pages/Projects.jsx';
 
-const pageMotion = {
-  initial: { opacity: 0, y: 12 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -8 },
-  transition: { duration: 0.32, ease: [0.22, 1, 0.36, 1] },
-};
-
 function PageShell({ children }) {
   return (
-    <motion.main className="page-shell" {...pageMotion}>
+    <main className="page-shell">
       {children}
-    </motion.main>
+    </main>
   );
+}
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+
+  useLayoutEffect(() => {
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return undefined;
+    }
+
+    // The next page may mount a few frames later (AnimatePresence waits), so look for the anchor until it exists.
+    let attempts = 0;
+    let timer = setTimeout(function findTarget() {
+      const target = document.getElementById(hash.slice(1));
+
+      if (target) {
+        target.scrollIntoView({ behavior: 'instant' });
+      } else if (attempts++ < 30) {
+        timer = setTimeout(findTarget, 16);
+      }
+    }, 0);
+
+    return () => clearTimeout(timer);
+  }, [pathname, hash]);
+
+  return null;
 }
 
 export default function App() {
   const location = useLocation();
 
   return (
-    <div className="site">
-      <SiteNav />
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route
-            path="/"
-            element={
-              <PageShell>
-                <Home />
-              </PageShell>
-            }
-          />
-          <Route
-            path="/projects"
-            element={
-              <PageShell>
-                <Projects />
-              </PageShell>
-            }
-          />
-          <Route
-            path="/projects/:slug"
-            element={
-              <PageShell>
-                <ProjectDetail />
-              </PageShell>
-            }
-          />
-          <Route
-            path="/about"
-            element={
-              <PageShell>
-                <About />
-              </PageShell>
-            }
-          />
-        </Routes>
-      </AnimatePresence>
-      <Footer />
-    </div>
+    <MotionConfig reducedMotion="user">
+      <div className="site" id="top">
+        <ScrollToTop />
+        <SiteNav />
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route
+              path="/"
+              element={
+                <PageShell>
+                  <Home />
+                </PageShell>
+              }
+            />
+            <Route
+              path="/projects"
+              element={
+                <PageShell>
+                  <Projects />
+                </PageShell>
+              }
+            />
+            <Route
+              path="/projects/:slug"
+              element={
+                <PageShell>
+                  <ProjectDetail />
+                </PageShell>
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <PageShell>
+                  <About />
+                </PageShell>
+              }
+            />
+          </Routes>
+        </AnimatePresence>
+        <Footer />
+      </div>
+    </MotionConfig>
   );
 }

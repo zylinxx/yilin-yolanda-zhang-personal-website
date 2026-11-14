@@ -1,0 +1,63 @@
+:root {
+  --color-paper: oklch(97.4% 0.006 82);
+  --color-paper-2: oklch(94.5% 0.007 240);
+  --color-paper-3: oklch(91% 0.009 240);
+  --color-ink: oklch(19% 0.018 250);
+  --color-ink-2: oklch(33% 0.020 250);
+  --color-muted: oklch(45% 0.018 250);
+  --color-neutral: oklch(56% 0.014 250);
+  --color-rule: oklch(77% 0.012 245);
+  --color-rule-2: oklch(84% 0.010 245);
+  --color-accent: oklch(37% 0.125 20);
+  --color-accent-soft: color-mix(in oklch, var(--color-accent) 8%, var(--color-paper));
+  --color-accent-ink: oklch(97% 0.005 240);
+  --color-focus: oklch(49% 0.180 20);
+  --color-error: oklch(48% 0.170 28);
+  --color-success: oklch(42% 0.100 145);
+
+  --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-body: "IBM Plex Sans", "Aptos", sans-serif;
+
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  --text-xs: 0.64rem;
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 1.9531rem;
+  --text-2xl: 2.4414rem;
+  --text-3xl: 3.0518rem;
+  --text-4xl: 3.8147rem;
+  --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 4rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+
+  --rule-thin: 1px;
+  --rule-focus: 3px;
+  --radius-none: 0;
+  --radius-soft: 0.25rem;
+
+  --page-gutter: clamp(1rem, 4vw, 4rem);
+  --layout-max: 112rem;
+  --measure: 65ch;
+  --press-distance: 0.0625rem;
+  --image-ratio: 4 / 3;
+  --z-base: 1;
+  --z-sticky: 200;
+}

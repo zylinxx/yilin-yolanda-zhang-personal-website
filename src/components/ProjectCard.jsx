@@ -1,36 +1,32 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { smallImage } from '../data/projects.js';
 
 export default function ProjectCard({ project, featured = false }) {
   return (
-    <motion.article className={featured ? 'project-card featured-card' : 'project-card'} layout>
+    <motion.article className={featured ? 'project-card featured-card' : 'project-card'} layout="position">
       <Link to={`/projects/${project.slug}`} className="project-link">
         <div className="project-media">
           <img
-            src={project.cover}
+            src={smallImage(project.cover)}
             alt={project.title}
             loading="lazy"
+            width="1600"
+            height="1200"
             className={project.coverClassName}
           />
-          {featured && (
-            <div className="featured-overlay">
-              <span>{project.title}</span>
-              <span>{project.year}</span>
-              <span>{project.category}</span>
-              <p>{project.summary}</p>
-            </div>
-          )}
         </div>
-        {!featured && (
-          <div className="project-meta">
-            <h3>{project.title}</h3>
-            <div>
-              <span>{project.year}</span>
-              <span>{project.category}</span>
-            </div>
-            <p>{project.summary}</p>
+        <div className="project-meta">
+          <div className="project-data">
+            <span>{project.category}</span>
+            <span>{project.year}</span>
           </div>
-        )}
+          <h2>
+            {project.title}
+            <span aria-hidden="true">↗</span>
+          </h2>
+          <p>{project.summary}</p>
+        </div>
       </Link>
     </motion.article>
   );

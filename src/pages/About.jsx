@@ -3,10 +3,10 @@ import { profile } from '../data/profile.js';
 export default function About() {
   return (
     <section className="about-page">
-      <div className="page-heading about-heading">
-        <span>About</span>
-        <h1>{profile.location}</h1>
-      </div>
+      <header className="profile-heading">
+        <h1>{profile.name} {profile.surname}</h1>
+        <p>{profile.location}</p>
+      </header>
 
       <div className="about-grid">
         <section className="about-bio">
@@ -31,18 +31,18 @@ export default function About() {
         <section>
           <h2>Skills</h2>
           <div className="skill-list">
-            {profile.skillGroups.map((group) => (
-              <div className="skill-group" key={group.title} tabIndex="0">
-                <h3>{group.title}</h3>
-                {group.items.length > 0 && (
+            {profile.skillGroups
+              .filter((group) => group.items.length > 0)
+              .map((group) => (
+                <div className="skill-group" key={group.title}>
+                  <h3>{group.title}</h3>
                   <ul className="skill-items">
                     {group.items.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
-                )}
-              </div>
-            ))}
+                </div>
+              ))}
           </div>
         </section>
 
@@ -61,7 +61,9 @@ export default function About() {
               </span>
             ))}
           </p>
-          <span>{profile.instagram}</span>
+          <a href={profile.instagramUrl} target="_blank" rel="noreferrer">
+            {profile.instagram}
+          </a>
         </section>
       </div>
     </section>
