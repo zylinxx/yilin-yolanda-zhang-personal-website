@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { AnimatePresence, MotionConfig } from 'framer-motion';
 import { useLayoutEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
@@ -88,6 +89,7 @@ export default function App() {
           </Routes>
         </AnimatePresence>
         <Footer />
+        <Analytics />
       </div>
     </MotionConfig>
   );
