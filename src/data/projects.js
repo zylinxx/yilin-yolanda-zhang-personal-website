@@ -466,6 +466,128 @@ export const projects = [
       },
     ],
   },
+  {
+    slug: 'a-dynamic-bridge',
+    title: 'A Dynamic Bridge',
+    year: '2024',
+    category: 'Architecture',
+    featured: false,
+    cover: '/images/projects/architecture/dynamic-bridge/02-site-pano-collage.webp',
+    summary: 'A sports center that showcases a lifestyle',
+    description: [
+      'Located at 223-225 E Water St, Syracuse, NY 13202, this project explores the role of enclosure in defining spatial experiences within an urban recreational facility. The design consists of programmatic blocks of varying heights, strategically arranged to balance public engagement and private security. A continuous, enclosed central volume houses essential private functions such as changing rooms and restrooms, ensuring privacy and accessibility. Circulation pathways are placed between this core and the surrounding recreational spaces, allowing seamless movement and continuous access to amenities. The adjacent activity zones, which require ample daylight, integrate staggered windows positioned at different heights to create a dynamic interplay of light and shadow while maintaining visual connectivity with the surroundings.',
+      'The massing strategy reinforces a hierarchy of openness and enclosure, responding to both programmatic needs and the site’s urban context. Taller volumes feature expansive floor-to-ceiling windows, maximizing natural light and framing views of the city, while lower blocks provide a more enclosed and intimate atmosphere. This interplay of solid and void enhances user engagement and ensures a responsive architectural solution tailored to the needs of a public recreational facility.',
+    ],
+    instructor: 'Nathan Williams',
+    role: 'Studio Project',
+    tools: ['Rhino', 'Adobe Illustrator', 'Adobe Photoshop'],
+    images: [
+      {
+        src: '/images/projects/architecture/dynamic-bridge/01-site-axonometric.webp',
+        alt: 'A Dynamic Bridge project image 01.',
+        caption: 'site axonometric',
+      },
+      {
+        src: '/images/projects/architecture/dynamic-bridge/02-site-pano-collage.webp',
+        alt: 'A Dynamic Bridge project image 02.',
+        caption: 'site pano collage',
+      },
+      {
+        src: '/images/projects/architecture/dynamic-bridge/03-opening-collage.webp',
+        alt: 'A Dynamic Bridge project image 03.',
+        caption: 'opening collage',
+      },
+      {
+        src: '/images/projects/architecture/dynamic-bridge/04-sequence-collage.webp',
+        alt: 'A Dynamic Bridge project image 04.',
+        caption: 'sequence collage',
+      },
+      {
+        src: '/images/projects/architecture/dynamic-bridge/05-site-plan-elevation.webp',
+        alt: 'A Dynamic Bridge project image 05.',
+        caption: 'site plan and elevation',
+      },
+      {
+        src: '/images/projects/architecture/dynamic-bridge/06-plans-section.webp',
+        pair: true,
+        alt: 'A Dynamic Bridge project image 06.',
+        caption: 'plans and section',
+      },
+      {
+        src: '/images/projects/architecture/dynamic-bridge/07-block-sections.webp',
+        pair: true,
+        alt: 'A Dynamic Bridge project image 07.',
+        caption: 'block sections',
+      },
+    ],
+  },
+  {
+    slug: 'overlay-pavilion',
+    title: 'Overlay Pavilion',
+    year: '2023',
+    category: 'Architecture',
+    featured: false,
+    cover: '/images/projects/architecture/overlay-pavilion/06-perspective.webp',
+    summary: 'A pavilion that demonstrates how the Wassily Chair is viewed',
+    description: [
+      'Inspired by Marcel Breuer’s Wassily B3 armchair—originally informed by bicycle handlebars that provided both strength and lightness—this pavilion translates the chair’s chrome-plated tubular steel and taut canvas slings into an architectural exploration. The intersecting steel frames become a key characteristic, creating rigid and steady connections that guide circulation and define spatial organization.',
+      'To evoke the tension and overlapping of the chair’s fabric on metal, the pavilion employs changes in altitude, carved pathways, and voids, allowing visitors to engage with different perspectives of overlapping forms. A palette of contrasting materials—thick and thin, smooth and rough, concrete and transparent—echoes the dualities in the original design and shapes varied atmospheres as light permeates frosted surfaces. By combining these intersecting systems and tactile contrasts, the pavilion highlights Breuer’s emphasis on structural clarity, tension, and overlapping elements at an immersive scale.',
+    ],
+    instructor: 'Jordan Young',
+    role: 'Studio Project',
+    tools: ['Rhino', 'Adobe Illustrator', 'Adobe Photoshop'],
+    images: [
+      {
+        src: '/images/projects/architecture/overlay-pavilion/01-axonometric.webp',
+        alt: 'Overlay Pavilion project image 01.',
+        caption: 'axonometric',
+      },
+      {
+        src: '/images/projects/architecture/overlay-pavilion/02-overlapping-diagram.webp',
+        alt: 'Overlay Pavilion project image 02.',
+        caption: 'overlapping diagram',
+      },
+      {
+        src: '/images/projects/architecture/overlay-pavilion/03-plan.webp',
+        alt: 'Overlay Pavilion project image 03.',
+        caption: 'plan',
+      },
+      {
+        src: '/images/projects/architecture/overlay-pavilion/04-section-01.webp',
+        pair: true,
+        alt: 'Overlay Pavilion project image 04.',
+        caption: 'section',
+      },
+      {
+        src: '/images/projects/architecture/overlay-pavilion/05-section-02.webp',
+        pair: true,
+        alt: 'Overlay Pavilion project image 05.',
+        caption: 'section',
+      },
+      {
+        src: '/images/projects/architecture/overlay-pavilion/06-perspective.webp',
+        alt: 'Overlay Pavilion project image 06.',
+        caption: 'perspective',
+      },
+      {
+        src: '/images/projects/architecture/overlay-pavilion/07-model-interior.webp',
+        alt: 'Overlay Pavilion project image 07.',
+        caption: 'model photo',
+      },
+      {
+        src: '/images/projects/architecture/overlay-pavilion/08-model-elevation.webp',
+        pair: true,
+        alt: 'Overlay Pavilion project image 08.',
+        caption: 'model photo',
+      },
+      {
+        src: '/images/projects/architecture/overlay-pavilion/09-model-site.webp',
+        pair: true,
+        alt: 'Overlay Pavilion project image 09.',
+        caption: 'model photo',
+      },
+    ],
+  },
 ];
 
 export const filters = [
