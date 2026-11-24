@@ -1,4 +1,4 @@
-const categories = ['Architecture', 'Product', 'Photography', 'Graphics', 'Content'];
+const categories = ['Architecture', 'Visual', 'Product', 'Photography', 'Graphics', 'Content'];
 
 export const projects = [
   {
@@ -590,9 +590,22 @@ export const projects = [
   },
 ];
 
+// Visual works are image-only: shown as a preview grid on the archive, with no detail pages.
+export const visualWorks = [
+  { src: '/images/projects/visual/porous-forms.webp', alt: 'Porous Forms.' },
+  { src: '/images/projects/visual/analytical-drawing-01.webp', alt: 'Analytical Drawing I.' },
+  { src: '/images/projects/visual/analytical-drawing-02.webp', alt: 'Analytical Drawing II.' },
+  { src: '/images/projects/visual/isometric-landscape.webp', alt: 'Isometric Landscape.' },
+  { src: '/images/projects/visual/solid-assemblies.webp', alt: 'Solid Assemblies.' },
+  { src: '/images/projects/visual/intersecting-volumes.webp', alt: 'Intersecting Volumes.' },
+  { src: '/images/projects/visual/surface-studies.webp', alt: 'Surface Studies.' },
+];
+
 export const filters = [
   'All',
-  ...categories.filter((category) => projects.some((project) => project.category === category)),
+  ...categories.filter((category) =>
+    category === 'Visual' ? visualWorks.length > 0 : projects.some((project) => project.category === category),
+  ),
 ];
 
 // Every .webp in public/images has a "-1200" copy for page display; the original is kept for the lightbox.

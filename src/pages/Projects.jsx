@@ -1,14 +1,15 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import Lightbox from '../components/Lightbox.jsx';
 import ProjectCard from '../components/ProjectCard.jsx';
-import { filters, projects } from '../data/projects.js';
+import { filters, projects, smallImage, visualWorks } from '../data/projects.js';
 
 export default function Projects() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const [openVisual, setOpenVisual] = useState(null);
   const categoryParam = searchParams.get('category');
   const renamedCategories = {
-    Visual: 'Graphics',
     Editorial: 'Content',
     Archive: 'Product',
   };
@@ -36,7 +37,6 @@ export default function Projects() {
             Architecture, products, photography, graphics, and content studies.
           </p>
         </div>
-        <span>{String(visibleProjects.length).padStart(2, '0')} works</span>
       </header>
 
       {/* Filters only help once there is more than one category of work. */}
@@ -72,6 +72,29 @@ export default function Projects() {
           ))}
         </AnimatePresence>
       </motion.div>
+
+      {activeFilter === 'Visual' && (
+        <div className="visual-grid">
+          {visualWorks.map((image, index) => (
+            <button
+              key={image.src}
+              type="button"
+              className="visual-tile"
+              onClick={() => setOpenVisual(index)}
+              aria-label={`Enlarge ${image.alt}`}
+            >
+              <img src={smallImage(image.src)} alt={image.alt} loading="lazy" />
+            </button>
+          ))}
+        </div>
+      )}
+
+      <Lightbox
+        images={visualWorks}
+        index={openVisual}
+        onChange={setOpenVisual}
+        onClose={() => setOpenVisual(null)}
+      />
     </section>
   );
 }

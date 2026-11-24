@@ -555,6 +555,35 @@ button:disabled {
   border-bottom: 0;
 }
 
+/* Visual works: image-only preview grid that opens the lightbox. */
+.visual-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-lg);
+  align-items: start;
+  padding-bottom: var(--space-4xl);
+}
+
+@media (min-width: 40rem) {
+  .visual-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.visual-tile {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.visual-tile img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .project-link,
 .project-link:link {
   display: grid;
