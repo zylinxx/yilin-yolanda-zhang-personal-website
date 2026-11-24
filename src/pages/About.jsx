@@ -14,6 +14,9 @@ export default function About() {
           {profile.bio.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
+          <a href={profile.cvUrl} className="text-link" target="_blank" rel="noreferrer">
+            Full CV (PDF) <span aria-hidden="true">→</span>
+          </a>
         </section>
 
         <section>
