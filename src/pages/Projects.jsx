@@ -12,6 +12,7 @@ export default function Projects() {
   const renamedCategories = {
     Editorial: 'Content',
     Archive: 'Product',
+    Visual: 'Graphic',
   };
   const normalizedCategory = renamedCategories[categoryParam] ?? categoryParam;
   const activeFilter = filters.includes(normalizedCategory) ? normalizedCategory : 'All';
@@ -73,7 +74,7 @@ export default function Projects() {
         </AnimatePresence>
       </motion.div>
 
-      {activeFilter === 'Visual' && (
+      {activeFilter === 'Graphic' && (
         <div className="visual-grid">
           {visualWorks.map((image, index) => (
             <button

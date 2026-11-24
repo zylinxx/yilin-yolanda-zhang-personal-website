@@ -10,10 +10,10 @@ export default function Footer() {
       </p>
       <div className="foot-letter__links">
         <Link to="/about">About</Link>
-        <a href={`mailto:${profile.email}`}>Email</a>
+        <a href={`mailto:${profile.email}`}>{profile.email}</a>
         <a href={profile.instagramUrl} target="_blank" rel="noreferrer">{profile.instagram}</a>
-        <a href="#top">Top ↑</a>
       </div>
+      <a href="#top" className="back-to-top">Top ↑</a>
     </footer>
   );
 }

@@ -938,77 +938,26 @@ button:disabled {
 
 .about-grid h2 {
   margin: 0 0 var(--space-xl);
+  color: var(--color-ink);
   font-family: var(--font-display);
   font-size: var(--text-xl);
   font-style: normal;
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1.1;
   letter-spacing: -0.02em;
   text-transform: none;
 }
 
-.about-grid h3 {
-  margin: 0;
-  font-size: var(--text-base);
-}
-
 .about-bio p {
   max-width: var(--measure);
   margin: 0 0 var(--space-md);
+  color: var(--color-ink-2);
+  font-size: var(--text-base);
+  line-height: 1.6;
 }
 
-.about-grid ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.experience-list li {
-  display: grid;
-  padding-block: var(--space-md);
-  border-bottom: var(--rule-thin) solid var(--color-rule-2);
-  gap: var(--space-xs);
-}
-
-.experience-list li:first-child {
-  padding-top: 0;
-}
-
-.experience-list li:last-child {
-  border-bottom: 0;
-}
-
-.experience-title {
-  font-weight: 700;
-}
-
-.experience-list .experience-place {
-  color: var(--color-muted);
-}
-
-.skill-list {
-  display: grid;
-  gap: 0;
-}
-
-.skill-group {
-  display: grid;
-  min-height: auto;
-  padding: var(--space-md) 0;
-  align-items: start;
-  border: 0;
-  background: transparent;
-  gap: var(--space-xs);
-}
-
-.skill-items {
-  display: flex;
-  gap: var(--space-xs) var(--space-md);
-  flex-wrap: wrap;
-}
-
-.skill-items li {
-  color: var(--color-muted);
+.about-grid .text-link {
+  color: var(--color-accent);
 }
 
 #contact {
@@ -1084,7 +1033,29 @@ button:disabled {
   text-underline-offset: var(--space-3xs);
 }
 
+.back-to-top {
+  position: fixed;
+  right: var(--page-gutter);
+  bottom: var(--space-lg);
+  z-index: var(--z-sticky);
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  padding: 0 var(--space-md);
+  border: var(--rule-thin) solid var(--color-rule);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
 @media (hover: hover) and (pointer: fine) {
+  .back-to-top:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+
   .site-nav a:hover {
     color: var(--color-accent);
   }
@@ -1209,14 +1180,6 @@ button:disabled {
   }
 
   .about-grid > section:nth-child(2) {
-    grid-column: 9 / -1;
-  }
-
-  .about-grid > section:nth-child(3) {
-    grid-column: 1 / span 7;
-  }
-
-  .about-grid > section:nth-child(4) {
     grid-column: 9 / -1;
   }
 

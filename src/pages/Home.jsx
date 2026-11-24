@@ -110,9 +110,7 @@ export default function Home() {
         </header>
 
         <div className="gallery-results">
-          <p className="gallery-status">
-            Selected work · {String(featuredProjects.length).padStart(2, '0')}
-          </p>
+          <p className="gallery-status">Selected work</p>
           <div className="home-gallery-grid">
             {featuredProjects.map((project) => (
               <article key={project.slug}>

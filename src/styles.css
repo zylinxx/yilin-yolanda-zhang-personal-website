@@ -659,58 +659,6 @@ img {
   line-height: 1.25;
 }
 
-.about-grid ul {
-  display: grid;
-  gap: 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.experience-list li {
-  display: grid;
-  gap: 3px;
-  padding: 12px 0;
-}
-
-.experience-title {
-  font-weight: 600;
-}
-
-.experience-list .experience-place {
-  color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.35;
-}
-
-.skill-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 12px;
-}
-
-.skill-group {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 12px;
-  padding: 13px 0;
-  border-top: 1px solid var(--line);
-}
-
-.skill-group h3 {
-  margin: 0;
-  font-weight: 600;
-}
-
-.skill-items {
-  align-content: start;
-}
-
-.skill-items li {
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-
 #contact {
   display: grid;
   align-content: start;
@@ -831,10 +779,6 @@ img {
   .about-grid > section:nth-child(2),
   .about-grid > section:nth-child(4) {
     grid-column: 8 / -1;
-  }
-
-  .skill-list {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -1019,10 +963,6 @@ img {
 
   .about-bio p {
     font-size: 1.14rem;
-  }
-
-  .skill-group {
-    grid-template-columns: 1fr;
   }
 
   .site-footer {

@@ -56,6 +56,6 @@ export const profile = {
       items: [],
     },
   ],
-  phoneNumbers: ['+1 315-680-9797', '+86 133-8571-3691'],
+  phoneNumbers: ['+1 315-680-9797'],
   contactEmails: ['yzhan652@syr.edu', 'zylinyolanda@gmail.com'],
 };

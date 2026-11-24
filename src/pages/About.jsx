@@ -19,36 +19,6 @@ export default function About() {
           </a>
         </section>
 
-        <section>
-          <h2>Experience</h2>
-          <ul className="experience-list">
-            {profile.experience.map((item) => (
-              <li key={item.title}>
-                <span className="experience-title">{item.title}</span>
-                <span className="experience-place">{item.place}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2>Skills</h2>
-          <div className="skill-list">
-            {profile.skillGroups
-              .filter((group) => group.items.length > 0)
-              .map((group) => (
-                <div className="skill-group" key={group.title}>
-                  <h3>{group.title}</h3>
-                  <ul className="skill-items">
-                    {group.items.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-          </div>
-        </section>
-
         <section id="contact">
           <h2>Contact</h2>
           {profile.phoneNumbers.map((phone) => (

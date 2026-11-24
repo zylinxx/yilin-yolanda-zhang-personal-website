@@ -12,6 +12,7 @@
 ## Image Rules (always apply unless the owner asks otherwise)
 
 - No white margins: crop blank white borders off every served project image, both the full-size file and its `-1200` copy. Measure the real content edge; do not crop into the drawing itself. If an image's drawing already runs to the edge, leave it.
+  - Exception: white-background images in the Graphic grid (`public/images/projects/visual/`) keep an even white margin on all four sides (5% of the image width), on both the full-size file and its `-1200` copy. Do not crop it off.
 - Covers (`cover`) must have no white edges and display centered; keep the default centered `object-fit: cover`, with no offset `object-position`.
 - Multi-image sheets: when the original source puts several renderings on one sheet, serve the original sheet as a single image instead of splitting it into crops, unless asked to split.
 - Captions are short titles only (for example `biology diagram`, `site plan`, `model photo`). No descriptive sentences, explanations, or lists of contents.

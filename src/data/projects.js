@@ -1,4 +1,4 @@
-const categories = ['Architecture', 'Visual', 'Product', 'Photography', 'Graphics', 'Content'];
+const categories = ['Architecture', 'Graphic', 'Product', 'Photography', 'Content'];
 
 export const projects = [
   {
@@ -259,7 +259,7 @@ export const projects = [
     title: 'BLAM – Biennale Lab and Archives for Media',
     year: '2025',
     category: 'Architecture',
-    featured: true,
+    featured: false,
     cover: '/images/projects/architecture/blam/cover.webp',
     summary:
       'A media archive and research center in the Venice Arsenale, defined by shifting volumes with a central atrium',
@@ -472,7 +472,7 @@ export const projects = [
     year: '2024',
     category: 'Architecture',
     featured: false,
-    cover: '/images/projects/architecture/dynamic-bridge/02-site-pano-collage.webp',
+    cover: '/images/projects/architecture/dynamic-bridge/cover.webp',
     summary: 'A sports center that showcases a lifestyle',
     description: [
       'Located at 223-225 E Water St, Syracuse, NY 13202, this project explores the role of enclosure in defining spatial experiences within an urban recreational facility. The design consists of programmatic blocks of varying heights, strategically arranged to balance public engagement and private security. A continuous, enclosed central volume houses essential private functions such as changing rooms and restrooms, ensuring privacy and accessibility. Circulation pathways are placed between this core and the surrounding recreational spaces, allowing seamless movement and continuous access to amenities. The adjacent activity zones, which require ample daylight, integrate staggered windows positioned at different heights to create a dynamic interplay of light and shadow while maintaining visual connectivity with the surroundings.',
@@ -604,7 +604,7 @@ export const visualWorks = [
 export const filters = [
   'All',
   ...categories.filter((category) =>
-    category === 'Visual' ? visualWorks.length > 0 : projects.some((project) => project.category === category),
+    category === 'Graphic' ? visualWorks.length > 0 : projects.some((project) => project.category === category),
   ),
 ];
 
