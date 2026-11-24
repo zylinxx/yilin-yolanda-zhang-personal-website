@@ -1194,6 +1194,10 @@ button:disabled {
     font-size: var(--text-display);
   }
 
+  .home-gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .archive-heading h1,
   .profile-heading h1,
   .detail-title-row h1 {
