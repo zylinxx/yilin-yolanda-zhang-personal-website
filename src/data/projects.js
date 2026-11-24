@@ -2,6 +2,70 @@ const categories = ['Architecture', 'Product', 'Photography', 'Graphics', 'Conte
 
 export const projects = [
   {
+    slug: 'rewiring',
+    title: 'Rewiring',
+    year: '2026',
+    category: 'Architecture',
+    featured: true,
+    cover: '/images/projects/architecture/rewiring/07-render-lounge.webp',
+    summary: 'A low-tech, high-care clinic within the stone grotti of Moghegno.',
+    description: [
+      'Rewiring proposes a low-tech and high-care clinic in Moghegno where care is produced not through technological complexity, but through architecture’s conditions including warmth, light, air, material, proximity, and human presence. Working within the existing grotti, the project treats their thick stone walls, thermal mass, topography, and fragmented spatial character as active components of healing rather than obstacles to modernization. New interventions remain deliberately minimal, tactile, and repairable. The project argues that healthcare architecture does not need to become more clinical to provide better care; instead, it can recover low-tech environmental intelligence and transform the existing borgo into an intimate infrastructure of collective care.',
+    ],
+    instructor: 'Daniele Profeta',
+    role: 'Studio Project, with Zhen Li and Yi Lyu',
+    tools: ['Rhino', 'Adobe Illustrator', 'Adobe Photoshop', 'D5 Render'],
+    images: [
+      {
+        src: '/images/projects/architecture/rewiring/01-site-plan.webp',
+        alt: 'Rewiring project image 01.',
+        caption: 'site plan',
+      },
+      {
+        src: '/images/projects/architecture/rewiring/02-site-photo.webp',
+        pair: true,
+        alt: 'Rewiring project image 02.',
+        caption: 'site photo',
+      },
+      {
+        src: '/images/projects/architecture/rewiring/03-3d-scan.webp',
+        pair: true,
+        alt: 'Rewiring project image 03.',
+        caption: '3d scan',
+      },
+      {
+        src: '/images/projects/architecture/rewiring/04-diagram.webp',
+        alt: 'Rewiring project image 04.',
+        caption: 'diagram',
+      },
+      {
+        src: '/images/projects/architecture/rewiring/05-section.webp',
+        alt: 'Rewiring project image 05.',
+        caption: 'section',
+      },
+      {
+        src: '/images/projects/architecture/rewiring/06-plan.webp',
+        alt: 'Rewiring project image 06.',
+        caption: 'plan',
+      },
+      {
+        src: '/images/projects/architecture/rewiring/07-render-lounge.webp',
+        alt: 'Rewiring project image 07.',
+        caption: 'lounge render',
+      },
+      {
+        src: '/images/projects/architecture/rewiring/08-render-detail.webp',
+        alt: 'Rewiring project image 08.',
+        caption: 'detail render',
+      },
+      {
+        src: '/images/projects/architecture/rewiring/09-render-shed.webp',
+        alt: 'Rewiring project image 09.',
+        caption: 'shed render',
+      },
+    ],
+  },
+  {
     slug: 'the-living-cycles',
     title: 'The Living Cycles',
     year: '2024',
