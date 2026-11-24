@@ -7,16 +7,64 @@ export default function ProjectDetail() {
   const { slug } = useParams();
   const project = getProjectBySlug(slug);
   const [openImage, setOpenImage] = useState(null);
+  const [ratios, setRatios] = useState({});
 
   if (!project) {
     return <Navigate to="/projects" replace />;
   }
 
   const { previous, next } = getAdjacentProjects(project.slug);
-  const images = project.images.map((image) => ({
-    ...image,
-    alt: image.caption ? `${project.title}: ${image.caption}` : image.alt,
-  }));
+  // The cover is shown on the index pages, so don't open the detail page with it again.
+  const images = project.images
+    .filter((image, index) => !(index === 0 && image.src === project.cover))
+    .map((image) => ({
+      ...image,
+      alt: image.caption ? `${project.title}: ${image.caption}` : image.alt,
+    }));
+  // Consecutive `pair` images share a row; everything else gets its own row.
+  const rows = [];
+  images.forEach((image, index) => {
+    if (image.pair && images[index + 1]?.pair && rows.at(-1)?.at(-1) !== index) {
+      rows.push([index, index + 1]);
+    } else if (rows.at(-1)?.at(-1) !== index) {
+      rows.push([index]);
+    }
+  });
+
+  // In a pair, each figure grows by its image's aspect ratio so both images end up the same height.
+  const renderFigure = (index) => {
+    const image = images[index];
+    const ratio = ratios[image.src] ?? 4 / 3;
+    return (
+      <figure key={image.src} style={image.pair ? { flexGrow: ratio } : undefined}>
+        <button
+          type="button"
+          className="detail-image-button"
+          onClick={() => setOpenImage(index)}
+          aria-label={`Enlarge image ${index + 1}${image.caption ? `: ${image.caption}` : ''}`}
+        >
+          <img
+            src={smallImage(image.src)}
+            srcSet={image.src.endsWith('.webp') ? `${smallImage(image.src)} 1200w, ${image.src} 2400w` : undefined}
+            sizes="(min-width: 60rem) 60vw, 100vw"
+            alt={image.alt}
+            loading={index === 0 ? 'eager' : 'lazy'}
+            width="1600"
+            height="1200"
+            className={image.className}
+            onLoad={(event) => {
+              const { naturalWidth, naturalHeight } = event.currentTarget;
+              if (naturalHeight) {
+                setRatios((current) => ({ ...current, [image.src]: naturalWidth / naturalHeight }));
+              }
+            }}
+          />
+        </button>
+        {image.caption && <figcaption>{image.caption}</figcaption>}
+      </figure>
+    );
+  };
+
   const facts = [
     ['Year', project.year],
     ['Type', project.role],
@@ -62,28 +110,15 @@ export default function ProjectDetail() {
           ))}
         </div>
         <div className="detail-images">
-          {images.map((image, index) => (
-            <figure key={image.src}>
-              <button
-                type="button"
-                className="detail-image-button"
-                onClick={() => setOpenImage(index)}
-                aria-label={`Enlarge image ${index + 1}${image.caption ? `: ${image.caption}` : ''}`}
-              >
-                <img
-                  src={smallImage(image.src)}
-                  srcSet={image.src.endsWith('.webp') ? `${smallImage(image.src)} 1200w, ${image.src} 2400w` : undefined}
-                  sizes="(min-width: 60rem) 60vw, 100vw"
-                  alt={image.alt}
-                  loading={index === 0 ? 'eager' : 'lazy'}
-                  width="1600"
-                  height="1200"
-                  className={image.className}
-                />
-              </button>
-              {image.caption && <figcaption>{image.caption}</figcaption>}
-            </figure>
-          ))}
+          {rows.map((row) =>
+            row.length === 2 ? (
+              <div key={images[row[0]].src} className="detail-image-pair">
+                {row.map(renderFigure)}
+              </div>
+            ) : (
+              renderFigure(row[0])
+            ),
+          )}
         </div>
       </div>
 

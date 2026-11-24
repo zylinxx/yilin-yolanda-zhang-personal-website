@@ -641,13 +641,14 @@ button:disabled {
   display: grid;
   gap: var(--space-3xl);
   padding-block: var(--space-xl) var(--space-4xl);
+  padding-inline: clamp(0rem, 10vw - 2.5rem, 10rem);
 }
 
 .project-detail-header {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-xl);
-  padding-block: var(--space-xl) var(--space-2xl);
+  gap: calc(var(--space-xl) * 0.7);
+  padding-block: calc(var(--space-xl) * 0.7) calc(var(--space-2xl) * 0.7);
   border-top: var(--rule-thin) solid var(--color-rule);
   border-bottom: var(--rule-thin) solid var(--color-ink);
 }
@@ -674,7 +675,7 @@ button:disabled {
   display: grid;
   margin: 0;
   grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-  gap: var(--space-md) var(--space-lg);
+  gap: calc(var(--space-md) * 0.7) var(--space-lg);
 }
 
 .detail-facts > div {
@@ -714,7 +715,7 @@ button:disabled {
   max-width: 45ch;
   margin: 0;
   font-family: var(--font-display);
-  font-size: var(--text-xl);
+  font-size: calc(var(--text-xl) * 0.5);
   font-weight: 300;
   line-height: 1.25;
 }
@@ -756,6 +757,11 @@ button:disabled {
 .detail-images figure {
   min-width: 0;
   margin: 0;
+}
+
+.detail-image-pair {
+  display: grid;
+  gap: var(--space-2xl);
 }
 
 .detail-image-button {
@@ -1089,6 +1095,16 @@ button:disabled {
 
   .site-header .home-link > span.wordmark-compact {
     display: none;
+  }
+
+  .detail-image-pair {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+  }
+
+  .detail-image-pair figure {
+    flex-basis: 0;
   }
 
   .identity-block,

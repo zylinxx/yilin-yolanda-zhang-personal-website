@@ -15,6 +15,7 @@
 - Covers (`cover`) must have no white edges and display centered; keep the default centered `object-fit: cover`, with no offset `object-position`.
 - Multi-image sheets: when the original source puts several renderings on one sheet, serve the original sheet as a single image instead of splitting it into crops, unless asked to split.
 - Captions are short titles only (for example `biology diagram`, `site plan`, `model photo`). No descriptive sentences, explanations, or lists of contents.
+- Similar images (model photos, same-type diagrams, sequential steps, site models) go two per row: add `pair: true` to each image in `src/data/projects.js`, in even runs so no paired image is left alone on a row. Distinct drawings (plans, sections, renders) stay one per row.
 - Captions are all lowercase, including words like `3d`. Write them lowercase in `src/data/projects.js`; do not rely on CSS `text-transform`.
 
 ## Commands
